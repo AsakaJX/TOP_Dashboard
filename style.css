@@ -1,0 +1,106 @@
+/* Figtree */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Figtree', 'Courier New', Courier, monospace;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  height: 100vh;
+
+  display: grid;
+  grid-template: 1fr 6fr / 1fr 5fr;
+
+  background-color: whitesmoke;
+}
+
+header {
+  background-color: white;
+
+  grid-column: 1 / -1;
+  grid-row: 1;
+
+  display: flex;
+  align-items: center;
+
+  padding: 1% 1%;
+}
+
+.user-card {
+  width: 100%;
+  height: 5rem;
+
+  font-size: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.user-card img {
+  height: 100%;
+  display: block;
+  object-fit: contain; /* crop if aspect ratio differs */
+  border-radius: 50%; /* optional: circle avatar */
+}
+
+main {
+  background-color: whitesmoke;
+
+  grid-row: 2;
+  grid-column: 2 / -1;
+}
+
+.side-menu {
+  margin: 50% 0;
+  border-radius: 0 1em 1em 0;
+  position: relative;
+
+  background-color: cornflowerblue;
+
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+}
+
+.side-menu * {
+  color: white;
+}
+
+.side-menu-title-container {
+  display: flex;
+  align-items: center;
+}
+
+.side-menu-icon {
+  width: 18%;
+  fill: white;
+}
+
+.side-menu-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.side-menu ul {
+  margin-top: 3em;
+}
+
+.side-menu ul * {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.side-menu ul button {
+  border: 0;
+  background-color: transparent;
+}
