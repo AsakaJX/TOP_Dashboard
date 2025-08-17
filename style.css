@@ -244,8 +244,11 @@ input[type='text'] {
 
   padding: 0.3em;
 
-  transition: border-bottom 0.1s ease-in-out;
+  transition:
+    border-bottom 0.1s ease-in-out,
+    border-left 0.1s ease-in-out;
   border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
 
   margin-bottom: 0.3em;
 
@@ -254,7 +257,14 @@ input[type='text'] {
   align-content: center;
 }
 
+.side-menu-buttons button:focus-visible {
+  outline: 0;
+  border-left: 1px solid var(--text-light);
+}
+
 .side-menu-buttons button:hover {
+  cursor: pointer;
+  border-left: 1px solid transparent;
   border-bottom: 1px solid var(--text-light);
 }
 
@@ -267,6 +277,17 @@ input[type='text'] {
 
   background-color: transparent;
   border: 0;
+
+  border-radius: 50%;
+}
+
+.hide-side-menu-button:hover,
+.hide-side-menu-button:focus-visible {
+  outline: 1px solid var(--text-light);
+}
+
+.hide-side-menu-button:active {
+  outline-offset: -1px;
 }
 
 .hide-side-menu-button:hover {
